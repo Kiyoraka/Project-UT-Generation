@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="assets/style/components/logo-animation.css">
     <link rel="stylesheet" href="assets/style/components/navigation.css">
     <link rel="stylesheet" href="assets/style/components/home.css">
+    <link rel="stylesheet" href="assets/style/components/cards.css">
+    <link rel="stylesheet" href="assets/style/components/animations.css">
 
     <!-- Preload Critical Assets -->
     <link rel="preload" href="assets/images/logo.png" as="image">
@@ -100,119 +102,215 @@
     <main>
 
         <!-- HOME SECTION -->
-        <section id="home" class="section">
-            <div class="section-container">
-                <div class="hero">
-                    <!-- Badge -->
-                    <span class="hero-badge">✨ Welcome to Innovation</span>
+        <section id="home" class="section active">
+            <div class="section-content">
+                <div class="section-container">
+                    <div class="hero">
+                        <!-- Main Tagline -->
+                        <h1 class="hero-title" style="margin-bottom: 2rem;">
+                            <span class="hero-title-gradient">ENGINEERING SUCCESS</span><br>
+                            <span class="hero-title-gradient">THROUGH INNOVATION</span>
+                        </h1>
 
-                    <!-- Title -->
-                    <h1 class="hero-title">
-                        Building the <span class="hero-title-gradient">Future</span><br>
-                        of Engineering
-                    </h1>
-
-                    <!-- Subtitle -->
-                    <p class="hero-subtitle">
-                        We deliver cutting-edge engineering solutions that transform ideas into reality.
-                        Expertise meets innovation to create sustainable and impactful results.
-                    </p>
-
-                    <!-- Call to Action Buttons -->
-                    <div class="hero-cta">
-                        <button class="btn-primary">Get Started</button>
-                        <button class="btn-glass">Learn More</button>
-                    </div>
-                </div>
-
-                <!-- Features Grid -->
-                <div class="features">
-                    <!-- Feature 1 -->
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h3 class="feature-title">Innovative Solutions</h3>
-                        <p class="feature-description">
-                            Cutting-edge technology and creative problem-solving to tackle complex engineering challenges.
-                        </p>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3 class="feature-title">Precision Engineering</h3>
-                        <p class="feature-description">
-                            Meticulous attention to detail ensuring every project meets the highest standards of quality.
-                        </p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3 class="feature-title">Fast Delivery</h3>
-                        <p class="feature-description">
-                            Efficient workflows and agile methodologies to deliver projects on time without compromising quality.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Stats Section -->
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Expert Engineers</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Client Satisfaction</div>
+                        <!-- Call to Action Buttons -->
+                        <div class="hero-cta">
+                            <button class="btn-primary" data-navigate="about">About Us</button>
+                            <button class="btn-primary" data-navigate="contact">Contact Us</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT SECTION (Placeholder) -->
+        <!-- ABOUT SECTION -->
         <section id="about" class="section">
-            <div class="section-container">
-                <div class="hero">
-                    <h2 class="hero-title">About Us</h2>
-                    <p class="hero-subtitle">Coming Soon</p>
+            <div class="section-content">
+                <div class="section-container">
+                    <h2 class="section-title">About Us</h2>
+
+                    <div class="card-grid-3" style="margin-top: 3rem;">
+                        <!-- Company Background -->
+                        <div class="glass-card card-with-icon rise-animation">
+                            <div class="card-icon">🏢</div>
+                            <h3 class="card-title">Company Background</h3>
+                            <p class="card-description">
+                                Established in 2010, UT Generation Sdn Bhd has been at the forefront of engineering innovation, delivering cutting-edge solutions across multiple industries. Our commitment to excellence has made us a trusted partner for businesses seeking transformative engineering services.
+                            </p>
+                        </div>
+
+                        <!-- Vision -->
+                        <div class="glass-card card-with-icon rise-animation">
+                            <div class="card-icon">🎯</div>
+                            <h3 class="card-title">Vision</h3>
+                            <p class="card-description">
+                                To be the leading engineering solutions provider in the region, recognized for innovation, quality, and sustainable practices. We envision a future where engineering excellence drives progress and creates lasting value for communities and industries.
+                            </p>
+                        </div>
+
+                        <!-- Mission -->
+                        <div class="glass-card card-with-icon rise-animation">
+                            <div class="card-icon">🚀</div>
+                            <h3 class="card-title">Mission</h3>
+                            <p class="card-description">
+                                Delivering innovative engineering solutions that transform challenges into opportunities. We combine technical expertise with creative problem-solving to provide sustainable, efficient, and reliable services that exceed client expectations.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- STAFF SECTION (Placeholder) -->
+        <!-- STAFF SECTION -->
         <section id="staff" class="section">
-            <div class="section-container">
-                <div class="hero">
-                    <h2 class="hero-title">Our Team</h2>
-                    <p class="hero-subtitle">Coming Soon</p>
+            <div class="section-content">
+                <div class="section-container">
+                    <h2 class="section-title">Our Leadership Team</h2>
+
+                    <div class="card-grid-3" style="margin-top: 3rem;">
+                        <!-- Managing Director -->
+                        <div class="staff-card rise-animation">
+                            <div class="staff-avatar">👤</div>
+                            <h3 class="staff-name">John Doe</h3>
+                            <p class="staff-position">Managing Director</p>
+                        </div>
+
+                        <!-- Operations Director -->
+                        <div class="staff-card rise-animation">
+                            <div class="staff-avatar">👤</div>
+                            <h3 class="staff-name">Jane Smith</h3>
+                            <p class="staff-position">Operations Director</p>
+                        </div>
+
+                        <!-- Engineering Manager -->
+                        <div class="staff-card rise-animation">
+                            <div class="staff-avatar">👤</div>
+                            <h3 class="staff-name">Michael Chen</h3>
+                            <p class="staff-position">Engineering Manager</p>
+                        </div>
+
+                        <!-- Project Manager -->
+                        <div class="staff-card rise-animation">
+                            <div class="staff-avatar">👤</div>
+                            <h3 class="staff-name">Sarah Johnson</h3>
+                            <p class="staff-position">Project Manager</p>
+                        </div>
+
+                        <!-- Technical Lead -->
+                        <div class="staff-card rise-animation">
+                            <div class="staff-avatar">👤</div>
+                            <h3 class="staff-name">David Lee</h3>
+                            <p class="staff-position">Technical Lead</p>
+                        </div>
+
+                        <!-- Business Development Manager -->
+                        <div class="staff-card rise-animation">
+                            <div class="staff-avatar">👤</div>
+                            <h3 class="staff-name">Emily Wong</h3>
+                            <p class="staff-position">Business Development Manager</p>
+                        </div>
+                    </div>
+
+                    <!-- View Full Team Button -->
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <button class="btn-glass">View Full Team</button>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECT SECTION (Placeholder) -->
+        <!-- PROJECT SECTION -->
         <section id="project" class="section">
-            <div class="section-container">
-                <div class="hero">
-                    <h2 class="hero-title">Our Projects</h2>
-                    <p class="hero-subtitle">Coming Soon</p>
+            <div class="section-content">
+                <div class="section-container">
+                    <h2 class="section-title">Our Projects</h2>
+
+                    <div class="card-grid-3" style="margin-top: 3rem;">
+                        <!-- Project 1 -->
+                        <div class="project-card rise-animation">
+                            <div class="project-icon">🏭</div>
+                            <h3 class="project-name">Industrial Automation Project</h3>
+                            <p class="project-description">
+                                Complete automation solution for manufacturing facility, improving efficiency by 45% and reducing operational costs significantly.
+                            </p>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-card rise-animation">
+                            <div class="project-icon">🏢</div>
+                            <h3 class="project-name">Smart Building Solutions</h3>
+                            <p class="project-description">
+                                Integrated building management system with IoT sensors, optimizing energy consumption and enhancing occupant comfort.
+                            </p>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card rise-animation">
+                            <div class="project-icon">🏗️</div>
+                            <h3 class="project-name">Infrastructure Development</h3>
+                            <p class="project-description">
+                                Large-scale infrastructure project delivering sustainable solutions for urban development and community growth.
+                            </p>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project-card rise-animation">
+                            <div class="project-icon">⚡</div>
+                            <h3 class="project-name">Energy Management System</h3>
+                            <p class="project-description">
+                                Advanced energy monitoring and management platform reducing energy waste by 30% across multiple facilities.
+                            </p>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div class="project-card rise-animation">
+                            <div class="project-icon">🔧</div>
+                            <h3 class="project-name">Manufacturing Optimization</h3>
+                            <p class="project-description">
+                                Process optimization project improving production line efficiency and quality control systems.
+                            </p>
+                        </div>
+
+                        <!-- Project 6 -->
+                        <div class="project-card rise-animation">
+                            <div class="project-icon">📡</div>
+                            <h3 class="project-name">IoT Integration Project</h3>
+                            <p class="project-description">
+                                Enterprise-wide IoT implementation connecting devices, sensors, and systems for real-time data analytics.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION (Placeholder) -->
+        <!-- CONTACT SECTION -->
         <section id="contact" class="section">
-            <div class="section-container">
-                <div class="hero">
-                    <h2 class="hero-title">Contact Us</h2>
-                    <p class="hero-subtitle">Coming Soon</p>
+            <div class="section-content">
+                <div class="section-container">
+                    <h2 class="section-title">Contact Us</h2>
+
+                    <div class="card-grid-3" style="margin-top: 3rem;">
+                        <!-- Phone -->
+                        <div class="contact-box rise-animation">
+                            <div class="contact-icon">📞</div>
+                            <p class="contact-label">Phone</p>
+                            <p class="contact-value">+60 3-1234 5678</p>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-box rise-animation">
+                            <div class="contact-icon">✉️</div>
+                            <p class="contact-label">Email</p>
+                            <p class="contact-value">info@utgeneration.com</p>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="contact-box rise-animation">
+                            <div class="contact-icon">📍</div>
+                            <p class="contact-label">Address</p>
+                            <p class="contact-value">123 Business Street<br>Kuala Lumpur, Malaysia</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -225,6 +323,7 @@
          =================================== -->
     <script src="assets/script/components/logo-animation.js"></script>
     <script src="assets/script/components/navigation.js"></script>
+    <script src="assets/script/components/section-manager.js"></script>
     <script src="assets/script/master.js"></script>
 
 </body>

@@ -1,12 +1,25 @@
 /* ===================================
    HOME.CSS - Home Section Component
-   Hero section and home content
+   Hero section and common section styles
    =================================== */
 
+/* Section Common Styles */
 .section {
     min-height: 100vh;
     padding: var(--spacing-xl) var(--spacing-md);
     position: relative;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .section-container {

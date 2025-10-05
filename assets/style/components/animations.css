@@ -1,0 +1,185 @@
+/* ===================================
+   ANIMATIONS.CSS
+   Rise-from-below section animations
+   =================================== */
+
+/* Section Visibility */
+.section {
+    display: none;
+    opacity: 0;
+}
+
+.section.active {
+    display: block;
+    animation: sectionFadeIn 0.4s ease forwards;
+}
+
+/* Section Content Animations */
+.section-content {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section.active .section-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Rise Animation for Cards */
+.rise-animation {
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rise-animation.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Staggered Delays */
+.rise-animation:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.rise-animation:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.rise-animation:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.rise-animation:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+.rise-animation:nth-child(5) {
+    transition-delay: 0.6s;
+}
+
+.rise-animation:nth-child(6) {
+    transition-delay: 0.75s;
+}
+
+.rise-animation:nth-child(7) {
+    transition-delay: 0.9s;
+}
+
+.rise-animation:nth-child(8) {
+    transition-delay: 1.05s;
+}
+
+.rise-animation:nth-child(9) {
+    transition-delay: 1.2s;
+}
+
+.rise-animation:nth-child(10) {
+    transition-delay: 1.35s;
+}
+
+/* Section Fade In */
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide Down (for hiding sections) */
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+.section.hide {
+    animation: slideDown 0.3s ease forwards;
+}
+
+/* Button Hover Animation */
+.btn-rise {
+    transform: translateY(0);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.btn-rise:hover {
+    transform: translateY(-3px);
+}
+
+/* Pulse Animation for CTA */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 32px rgba(37, 99, 235, 0.5);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .section-content {
+        transform: translateY(60px);
+    }
+
+    .rise-animation {
+        transform: translateY(50px);
+    }
+
+    /* Reduce stagger delays on mobile for faster animation */
+    .rise-animation:nth-child(n) {
+        transition-delay: 0s;
+    }
+
+    .rise-animation:nth-child(1) {
+        transition-delay: 0s;
+    }
+
+    .rise-animation:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+
+    .rise-animation:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .rise-animation:nth-child(4) {
+        transition-delay: 0.3s;
+    }
+
+    .rise-animation:nth-child(5) {
+        transition-delay: 0.4s;
+    }
+
+    .rise-animation:nth-child(6) {
+        transition-delay: 0.5s;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .section-content,
+    .rise-animation {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+
+    .section.active .section-content,
+    .rise-animation.show {
+        animation: none;
+    }
+}
