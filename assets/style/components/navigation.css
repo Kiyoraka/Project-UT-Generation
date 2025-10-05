@@ -40,16 +40,27 @@
     text-decoration: none;
 }
 
+.navbar-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    transition: transform var(--transition-fast);
+}
+
+.navbar-logo:hover .navbar-logo-img {
+    transform: scale(1.05);
+}
+
 .navbar-logo-text {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.5px;
+    transition: color var(--transition-fast);
 }
 
-.navbar-logo-text:hover {
+.navbar-logo:hover .navbar-logo-text {
     color: var(--text-accent);
-    transition: color var(--transition-fast);
 }
 
 /* Navigation Menu */
@@ -183,6 +194,10 @@
 @media (max-width: 480px) {
     .navbar {
         padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .navbar-logo-img {
+        height: 32px;
     }
 
     .navbar-logo-text {
