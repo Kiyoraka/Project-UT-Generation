@@ -48,35 +48,18 @@ body::before {
 }
 
 /* ===================================
-   2. THEME IMPORT
-   Core theme variables and utilities
+   2. NOTE: CSS FILES LOADED VIA HTML
+   All component CSS files are loaded directly in index.html
+   for better browser compatibility and performance:
+   - theme.css (variables)
+   - master.css (this file - base styles)
+   - components/logo-animation.css
+   - components/navigation.css
+   - components/home.css
    =================================== */
 
-@import url('./theme.css');
-
 /* ===================================
-   3. COMPONENT IMPORTS
-   Modular component stylesheets
-   =================================== */
-
-/* Logo Animation Component */
-@import url('./components/logo-animation.css');
-
-/* Navigation Component */
-@import url('./components/navigation.css');
-
-/* Home Section Component */
-@import url('./components/home.css');
-
-/* Future Components (Uncomment when ready) */
-/* @import url('./components/about.css'); */
-/* @import url('./components/staff.css'); */
-/* @import url('./components/project.css'); */
-/* @import url('./components/contact.css'); */
-/* @import url('./components/footer.css'); */
-
-/* ===================================
-   4. UTILITY CLASSES
+   3. UTILITY CLASSES
    Common utility classes
    =================================== */
 
