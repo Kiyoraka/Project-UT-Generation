@@ -197,30 +197,16 @@ window.App = App;
 
 /**
  * ===================================
- * COMPONENT LOADER
- * Auto-load component scripts
+ * NOTE: COMPONENT SCRIPTS LOADED VIA HTML
+ * All component JavaScript files are loaded directly in index.html
+ * for better browser compatibility and to avoid path resolution issues:
+ * - components/logo-animation.js
+ * - components/navigation.js
+ * - master.js (this file)
+ *
+ * Component scripts auto-initialize when loaded.
  * ===================================
  */
-
-// Load component scripts dynamically
-const componentScripts = [
-    './components/logo-animation.js',
-    './components/navigation.js'
-    // Add more components here as needed
-    // './components/home.js',
-    // './components/about.js',
-    // './components/staff.js',
-    // './components/project.js',
-    // './components/contact.js'
-];
-
-// Load each component script
-componentScripts.forEach(script => {
-    const scriptElement = document.createElement('script');
-    scriptElement.src = script;
-    scriptElement.async = false; // Load in order
-    document.head.appendChild(scriptElement);
-});
 
 /**
  * ===================================
