@@ -1,0 +1,234 @@
+/* ===================================
+   THEME.CSS - Glassmorphism Theme
+   Engineering Company Website
+   Colors: Dark Blue, Black, White
+   =================================== */
+
+:root {
+    /* Primary Colors */
+    --color-primary: #0a1929;        /* Deep dark blue */
+    --color-secondary: #1a2332;      /* Medium dark blue */
+    --color-accent: #2563eb;         /* Bright blue accent */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Glassmorphism Colors */
+    --glass-bg: rgba(26, 35, 50, 0.7);
+    --glass-bg-light: rgba(37, 99, 235, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-accent: #60a5fa;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Backdrop Blur */
+    --blur-sm: blur(8px);
+    --blur-md: blur(16px);
+    --blur-lg: blur(24px);
+}
+
+/* ===================================
+   GLASSMORPHISM UTILITIES
+   =================================== */
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+}
+
+.glass-light {
+    background: var(--glass-bg-light);
+    backdrop-filter: var(--blur-lg);
+    -webkit-backdrop-filter: var(--blur-lg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 16px var(--glass-shadow);
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+    transition: all var(--transition-normal);
+}
+
+.glass-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+    transform: translateY(-4px);
+}
+
+/* ===================================
+   GRADIENT BACKGROUNDS
+   =================================== */
+
+.gradient-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+.gradient-accent {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #1e40af 100%);
+}
+
+.gradient-overlay {
+    background: linear-gradient(180deg,
+        rgba(10, 25, 41, 0.9) 0%,
+        rgba(10, 25, 41, 0.7) 50%,
+        rgba(10, 25, 41, 0.9) 100%
+    );
+}
+
+/* ===================================
+   BUTTON STYLES
+   =================================== */
+
+.btn-glass {
+    background: var(--glass-bg-light);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    padding: 12px 32px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-glass:hover {
+    background: var(--glass-bg);
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 24px var(--glass-shadow);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: 12px 32px;
+    border-radius: var(--radius-md);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.5);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   TEXT UTILITIES
+   =================================== */
+
+.text-glow {
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===================================
+   ANIMATION UTILITIES
+   =================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    animation: fadeIn var(--transition-slow) ease forwards;
+}
+
+.slide-in-top {
+    animation: slideInFromTop var(--transition-slow) ease forwards;
+}
+
+.slide-in-bottom {
+    animation: slideInFromBottom var(--transition-slow) ease forwards;
+}
+
+.scale-in {
+    animation: scaleIn var(--transition-slow) ease forwards;
+}
