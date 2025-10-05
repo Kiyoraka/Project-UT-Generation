@@ -41,6 +41,12 @@
     align-items: center;
     font-size: 1.8rem;
     margin-bottom: var(--spacing-xs);
+    color: var(--color-accent);
+}
+
+.card-icon i {
+    font-size: inherit;
+    color: inherit;
 }
 
 .card-title {
@@ -89,6 +95,11 @@
     color: var(--color-accent);
 }
 
+.staff-avatar i {
+    font-size: inherit;
+    color: inherit;
+}
+
 .staff-name {
     font-size: 1.1rem;
     font-weight: 700;
@@ -133,6 +144,12 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    color: var(--color-accent);
+}
+
+.project-icon i {
+    font-size: inherit;
+    color: inherit;
 }
 
 .project-name {
@@ -177,6 +194,11 @@
     font-size: 2rem;
     margin: 0 auto var(--spacing-sm);
     color: var(--color-accent);
+}
+
+.contact-icon i {
+    font-size: inherit;
+    color: inherit;
 }
 
 .contact-label {
