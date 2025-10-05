@@ -1,0 +1,201 @@
+/* ===================================
+   MASTER.CSS - Main Stylesheet
+   Engineering Company Website
+   Modular Component Import System
+   =================================== */
+
+/* ===================================
+   1. RESET & BASE STYLES
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, var(--color-primary) 0%, var(--color-black) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ===================================
+   2. THEME IMPORT
+   Core theme variables and utilities
+   =================================== */
+
+@import url('./theme.css');
+
+/* ===================================
+   3. COMPONENT IMPORTS
+   Modular component stylesheets
+   =================================== */
+
+/* Logo Animation Component */
+@import url('./components/logo-animation.css');
+
+/* Navigation Component */
+@import url('./components/navigation.css');
+
+/* Home Section Component */
+@import url('./components/home.css');
+
+/* Future Components (Uncomment when ready) */
+/* @import url('./components/about.css'); */
+/* @import url('./components/staff.css'); */
+/* @import url('./components/project.css'); */
+/* @import url('./components/contact.css'); */
+/* @import url('./components/footer.css'); */
+
+/* ===================================
+   4. UTILITY CLASSES
+   Common utility classes
+   =================================== */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.pt-xs { padding-top: var(--spacing-xs); }
+.pt-sm { padding-top: var(--spacing-sm); }
+.pt-md { padding-top: var(--spacing-md); }
+.pt-lg { padding-top: var(--spacing-lg); }
+.pt-xl { padding-top: var(--spacing-xl); }
+
+.pb-xs { padding-bottom: var(--spacing-xs); }
+.pb-sm { padding-bottom: var(--spacing-sm); }
+.pb-md { padding-bottom: var(--spacing-md); }
+.pb-lg { padding-bottom: var(--spacing-lg); }
+.pb-xl { padding-bottom: var(--spacing-xl); }
+
+/* ===================================
+   5. SCROLLBAR STYLING
+   =================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--glass-bg);
+    border-radius: 5px;
+    border: 2px solid var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
+
+/* ===================================
+   6. SELECTION STYLING
+   =================================== */
+
+::selection {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+::-moz-selection {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+/* ===================================
+   7. ACCESSIBILITY
+   =================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus Styles */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ===================================
+   8. PRINT STYLES
+   =================================== */
+
+@media print {
+    body::before,
+    .navbar,
+    .logo-screen {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+}
