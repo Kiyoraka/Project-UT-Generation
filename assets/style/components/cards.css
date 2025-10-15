@@ -67,7 +67,7 @@
 .card-description ol,
 .card-description ul {
     margin: 0;
-    padding-left: var(--spacing-md);
+    padding-left: var(--spacing-lg);
     text-align: justify;
 }
 
