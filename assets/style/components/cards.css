@@ -72,7 +72,7 @@
 }
 
 .card-description li {
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
     line-height: 1.6;
 }
 
