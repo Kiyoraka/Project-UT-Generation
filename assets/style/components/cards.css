@@ -169,6 +169,7 @@
     transition: all var(--transition-normal);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-sm);
 }
 
