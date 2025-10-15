@@ -97,6 +97,15 @@
     border-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Paragraph spacing within content box */
+.card-content-box p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-content-box p:last-child {
+    margin-bottom: 0;
+}
+
 /* Staff Card */
 .staff-card {
     background: var(--glass-bg);
