@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/style/components/navigation.css">
     <link rel="stylesheet" href="assets/style/components/home.css">
     <link rel="stylesheet" href="assets/style/components/cards.css">
+    <link rel="stylesheet" href="assets/style/components/modal.css">
     <link rel="stylesheet" href="assets/style/components/animations.css">
 
     <!-- Preload Critical Assets -->
@@ -267,67 +268,101 @@
                         <!-- Project 1 -->
                         <div class="project-card rise-animation">
                             <div class="project-icon">
-                                <i class="fas fa-industry"></i>
+                                <i class="fas fa-bolt"></i>
                             </div>
-                            <h3 class="project-name">Industrial Automation Project</h3>
-                            <p class="project-description">
-                                Complete automation solution for manufacturing facility, improving efficiency by 45% and reducing operational costs significantly.
-                            </p>
+                            <span class="project-badge">Multi-Category Infrastructure</span>
+                            <h3 class="project-name">Substation & Transmission Network</h3>
+                            <p class="project-description">Multi-Site Development Project</p>
+                            <p class="project-year">1999-2005</p>
+                            <button class="btn-view-details"
+                                data-project-title="Substation 275/132/33/11kV: Grik, Pergau, Bukit Tengah, Kota Star, Kampar. Transmission Line: 33kV Relocation Sg Buloh. 275/132 kV relocation subang Jaya Power Plant: Janamanjong, Pergau, Port Klang Control & Protection: 66kV SCADA System Sabah, Disturbance Recorder Ben 5000. M&E Building Services: IKBN Penang Civil Work: Slope Protection Substation 275/132/33/11kV: Tampoi, Pasir Gudang"
+                                data-project-scope="Substation 275/132/33/11kV: Grik, Pergau, Bukit Tengah, Kota Star, Kampar. Transmission Line: 33kV Relocation Sg Buloh. 275/132 kV relocation subang Jaya. Power Plant: Janamanjong, Pergau, Port Klang. Control & Protection: 66kV SCADA System Sabah, Disturbance Recorder Ben 5000. M&E Building Services: IKBN Penang. Civil Work: Slope Protection Substation 275/132/33/11kV: Tampoi, Pasir Gudang"
+                                data-project-client="TNB Intria Bina, TNEC, ALTENA, Pembinaan Tajri, Prestigious Discovery, JKR, Mega Nine, Casita Holding, ACEI, Megapadu, Yakiniaga, SPM"
+                                data-project-cost="31,000,000.00"
+                                data-project-date="April 1999 - December 2005"
+                                data-project-category="Multi-Category Infrastructure">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
 
                         <!-- Project 2 -->
                         <div class="project-card rise-animation">
                             <div class="project-icon">
-                                <i class="fas fa-building"></i>
+                                <i class="fas fa-bolt"></i>
                             </div>
-                            <h3 class="project-name">Smart Building Solutions</h3>
-                            <p class="project-description">
-                                Integrated building management system with IoT sensors, optimizing energy consumption and enhancing occupant comfort.
-                            </p>
+                            <span class="project-badge">Substation & Transmission</span>
+                            <h3 class="project-name">High Voltage Transmission Infrastructure</h3>
+                            <p class="project-description">KESAS & Regional Projects</p>
+                            <p class="project-year">2006-2010</p>
+                            <button class="btn-view-details"
+                                data-project-title="Kandis, Telok Kalong. Transmission Line: 275/132 kV Relocation KESAS HYW, 132kV Tower Replacement TKLG, 275kV DC line relocation Gurun, 33kV Line Relocation. M&E Building Services: Traffic Light maintenance contract, Apartment KEMENTAH, MRSM"
+                                data-project-scope="Substation: Kandis, Telok Kalong. Transmission Line: 275/132 kV Relocation KESAS HYW, 132kV Tower Replacement TKLG, 275kV DC line relocation Gurun, 33kV Line Relocation. M&E Building Services: Traffic Light maintenance contract, Apartment KEMENTAH, MRSM"
+                                data-project-client="TNB, TNEC, Cekar Tulin, JKR, MBI, AZRB, MESB, MP Taiping, SPNB, PROTAB, KUB"
+                                data-project-cost="40,000,000.00"
+                                data-project-date="January 2006 - December 2010"
+                                data-project-category="Substation & Transmission">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
 
                         <!-- Project 3 -->
                         <div class="project-card rise-animation">
                             <div class="project-icon">
-                                <i class="fas fa-hard-hat"></i>
+                                <i class="fas fa-building"></i>
                             </div>
-                            <h3 class="project-name">Infrastructure Development</h3>
-                            <p class="project-description">
-                                Large-scale infrastructure project delivering sustainable solutions for urban development and community growth.
-                            </p>
+                            <span class="project-badge">M&E Building Services</span>
+                            <h3 class="project-name">Datacenter Infrastructure Upgrade</h3>
+                            <p class="project-description">Cyberjaya CX2</p>
+                            <p class="project-year">2021</p>
+                            <button class="btn-view-details"
+                                data-project-title="M&E Building Services: Upgrade Switchboard & Cabling work at DATACENTER CX2 Cyberjaya"
+                                data-project-scope="Upgrade Switchboard & Cabling work at DATACENTER CX2 Cyberjaya"
+                                data-project-client="CSF CX Sdn Bhd"
+                                data-project-cost="4,700,000.00"
+                                data-project-date="March 2021"
+                                data-project-category="M&E Building Services">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
 
                         <!-- Project 4 -->
                         <div class="project-card rise-animation">
                             <div class="project-icon">
-                                <i class="fas fa-bolt"></i>
+                                <i class="fas fa-building"></i>
                             </div>
-                            <h3 class="project-name">Energy Management System</h3>
-                            <p class="project-description">
-                                Advanced energy monitoring and management platform reducing energy waste by 30% across multiple facilities.
-                            </p>
+                            <span class="project-badge">M&E Building Services</span>
+                            <h3 class="project-name">Menara Telekom Infrastructure</h3>
+                            <p class="project-description">Bangsar, Kuala Lumpur</p>
+                            <p class="project-year">2011</p>
+                            <button class="btn-view-details"
+                                data-project-title="M&E Building Services: Menara Telekom, Bangsar, Kuala Lumpur"
+                                data-project-scope="M&E Building Services for Menara Telekom, Bangsar, Kuala Lumpur"
+                                data-project-client="Telekom Malaysia Bhd"
+                                data-project-cost="2,964,000.00"
+                                data-project-date="April 2011"
+                                data-project-category="M&E Building Services">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
 
                         <!-- Project 5 -->
                         <div class="project-card rise-animation">
                             <div class="project-icon">
-                                <i class="fas fa-gears"></i>
+                                <i class="fas fa-bolt"></i>
                             </div>
-                            <h3 class="project-name">Manufacturing Optimization</h3>
-                            <p class="project-description">
-                                Process optimization project improving production line efficiency and quality control systems.
-                            </p>
-                        </div>
-
-                        <!-- Project 6 -->
-                        <div class="project-card rise-animation">
-                            <div class="project-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <h3 class="project-name">IoT Integration Project</h3>
-                            <p class="project-description">
-                                Enterprise-wide IoT implementation connecting devices, sensors, and systems for real-time data analytics.
-                            </p>
+                            <span class="project-badge">Transmission Line</span>
+                            <h3 class="project-name">33kV Line Relocation</h3>
+                            <p class="project-description">Gong Badak-Penarik, Terengganu</p>
+                            <p class="project-year">2011</p>
+                            <button class="btn-view-details"
+                                data-project-title="Transmission Line: Relocation 33kV Line Gong Badak-Penarik, Terengganu"
+                                data-project-scope="Relocation of 33kV Line Gong Badak-Penarik, Terengganu"
+                                data-project-client="Tenaga Nasional Berhad"
+                                data-project-cost="488,130.00"
+                                data-project-date="August 2011"
+                                data-project-category="Transmission Line">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -375,12 +410,79 @@
     </main>
 
     <!-- ===================================
+         PROJECT DETAILS MODAL
+         Popup modal for project information
+         =================================== -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2 class="modal-title">Project Title</h2>
+                <button class="modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Category Badge -->
+                <span class="modal-badge">Category</span>
+
+                <!-- Project Scope Section -->
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <i class="fas fa-list-check"></i>
+                        Project Scope
+                    </h3>
+                    <div class="modal-section-content" data-modal-scope>
+                        <p>Project scope details will appear here...</p>
+                    </div>
+                </div>
+
+                <!-- Client Section -->
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <i class="fas fa-user-tie"></i>
+                        Client
+                    </h3>
+                    <div class="modal-section-content" data-modal-client>
+                        Client information will appear here...
+                    </div>
+                </div>
+
+                <!-- Cost Section -->
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Project Cost
+                    </h3>
+                    <div class="modal-section-content">
+                        <p class="modal-cost" data-modal-cost>RM 0.00</p>
+                    </div>
+                </div>
+
+                <!-- Completion Date Section -->
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <i class="fas fa-calendar-check"></i>
+                        Completion Date
+                    </h3>
+                    <div class="modal-section-content">
+                        <p class="modal-date" data-modal-date>Date will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================
          SCRIPTS
          Load component scripts then master.js
          =================================== -->
     <script src="assets/script/components/logo-animation.js"></script>
     <script src="assets/script/components/navigation.js"></script>
     <script src="assets/script/components/section-manager.js"></script>
+    <script src="assets/script/components/modal.js"></script>
     <script src="assets/script/master.js"></script>
 
 </body>
