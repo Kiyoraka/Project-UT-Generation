@@ -63,6 +63,23 @@
     text-align: justify;
 }
 
+/* List Styling within Cards */
+.card-description ol,
+.card-description ul {
+    margin: 0;
+    padding-left: var(--spacing-md);
+    text-align: justify;
+}
+
+.card-description li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.6;
+}
+
+.card-description li:last-child {
+    margin-bottom: 0;
+}
+
 /* Staff Card */
 .staff-card {
     background: var(--glass-bg);
