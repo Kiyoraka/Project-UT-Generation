@@ -547,6 +547,156 @@
     z-index: 1;
 }
 
+/* ===================================
+   LEVEL 4 & 5 CONNECTORS
+   Extended hierarchy support
+   =================================== */
+
+/* Vertical Line from Level 3 to Level 4 */
+.org-level-3::after {
+    content: '';
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background: linear-gradient(180deg, var(--color-accent) 0%, rgba(59, 130, 246, 0.3) 100%);
+    z-index: 0;
+}
+
+/* Horizontal Line Connecting Siblings at Level 4 */
+.org-level-4 .org-level-staff-wrap::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, var(--color-accent) 50%, rgba(59, 130, 246, 0.3) 100%);
+    z-index: 0;
+}
+
+/* Vertical Lines from Horizontal Connector to Level 4 Cards */
+.org-level-4 .staff-card-horizontal::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.3) 0%, var(--color-accent) 100%);
+    z-index: 0;
+}
+
+/* Vertical Line from Level 4 to Level 5 */
+.org-level-4::after {
+    content: '';
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background: linear-gradient(180deg, var(--color-accent) 0%, rgba(59, 130, 246, 0.3) 100%);
+    z-index: 0;
+}
+
+/* ===================================
+   DEPARTMENT LABELS & GROUPS
+   Department heading and sub-grouping
+   =================================== */
+
+/* Department Label (e.g., "Engineering Team") */
+.org-department-label {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--glass-bg-light);
+    border: 1px solid var(--color-accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
+}
+
+/* Staff Container with Wrapping Support */
+.org-level-staff-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Department Groups Container (Level 5) */
+.org-level-departments {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+/* Individual Department Group */
+.org-department-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: relative;
+}
+
+/* Department Name Label */
+.org-department-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-xs);
+    text-align: center;
+}
+
+/* Vertical Connector to Department Groups */
+.org-department-group .staff-card-horizontal::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.3) 0%, var(--color-accent) 100%);
+    z-index: 0;
+}
+
+/* Horizontal Line Connecting Department Groups */
+.org-level-5 .org-level-departments::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, var(--color-accent) 50%, rgba(59, 130, 246, 0.3) 100%);
+    z-index: 0;
+}
+
+/* Cards within Department Groups */
+.org-department-group .staff-card-horizontal {
+    min-width: 200px;
+}
+
 /* Responsive Grids */
 @media (max-width: 1024px) {
     .card-grid-4 {
@@ -585,13 +735,28 @@
 
     /* Hide horizontal connectors on mobile, keep vertical only */
     .org-level-2 .org-level-staff::before,
-    .org-level-3 .org-level-staff::before {
+    .org-level-3 .org-level-staff::before,
+    .org-level-4 .org-level-staff-wrap::before,
+    .org-level-5 .org-level-departments::before {
         display: none;
     }
 
     .org-level-2 .staff-card-horizontal::before,
-    .org-level-3 .staff-card-horizontal::before {
+    .org-level-3 .staff-card-horizontal::before,
+    .org-level-4 .staff-card-horizontal::before,
+    .org-department-group .staff-card-horizontal::before {
         display: none;
+    }
+
+    /* Stack department groups vertically */
+    .org-level-departments {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .org-level-staff-wrap {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
