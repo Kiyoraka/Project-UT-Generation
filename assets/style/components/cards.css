@@ -364,10 +364,202 @@
     background: var(--color-primary);
 }
 
+/* ===================================
+   ORGANIZATIONAL CHART STYLES
+   Traditional org chart with connector lines
+   =================================== */
+
+/* Org Chart Container */
+.org-chart-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+/* Org Chart Level Container */
+.org-level {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Staff Container for Each Level */
+.org-level-staff {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+}
+
+/* Horizontal Staff Card */
+.staff-card-horizontal {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    min-width: 220px;
+    position: relative;
+}
+
+.staff-card-horizontal:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 12px 48px rgba(37, 99, 235, 0.3);
+    transform: translateY(-4px);
+}
+
+/* Small Avatar for Horizontal Cards */
+.staff-avatar-small {
+    width: 50px;
+    height: 50px;
+    background: var(--glass-bg-light);
+    border: 2px solid var(--glass-border);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.staff-avatar-small i {
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Staff Info Container */
+.staff-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.staff-info .staff-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.staff-info .staff-position {
+    font-size: 0.8rem;
+    color: var(--text-accent);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ===================================
+   CONNECTOR LINES SYSTEM
+   Traditional org chart connectors
+   =================================== */
+
+/* Vertical Line from Level 1 to Level 2 */
+.org-level-1::after {
+    content: '';
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background: linear-gradient(180deg, var(--color-accent) 0%, rgba(59, 130, 246, 0.3) 100%);
+    z-index: 0;
+}
+
+/* Vertical Line from Level 2 to Level 3 */
+.org-level-2::after {
+    content: '';
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background: linear-gradient(180deg, var(--color-accent) 0%, rgba(59, 130, 246, 0.3) 100%);
+    z-index: 0;
+}
+
+/* Horizontal Line Connecting Siblings at Level 2 */
+.org-level-2 .org-level-staff::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: calc(25% + 110px);
+    right: calc(25% + 110px);
+    height: 2px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, var(--color-accent) 50%, rgba(59, 130, 246, 0.3) 100%);
+    z-index: 0;
+}
+
+/* Vertical Lines from Horizontal Connector to Level 2 Cards */
+.org-level-2 .staff-card-horizontal::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.3) 0%, var(--color-accent) 100%);
+    z-index: 0;
+}
+
+/* Horizontal Line Connecting Siblings at Level 3 */
+.org-level-3 .org-level-staff::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: calc(16.67% + 110px);
+    right: calc(16.67% + 110px);
+    height: 2px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, var(--color-accent) 50%, rgba(59, 130, 246, 0.3) 100%);
+    z-index: 0;
+}
+
+/* Vertical Lines from Horizontal Connector to Level 3 Cards */
+.org-level-3 .staff-card-horizontal::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.3) 0%, var(--color-accent) 100%);
+    z-index: 0;
+}
+
+/* Ensure cards appear above connector lines */
+.staff-card-horizontal {
+    z-index: 1;
+}
+
 /* Responsive Grids */
 @media (max-width: 1024px) {
     .card-grid-4 {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Adjust org chart for tablet */
+    .org-level-staff {
+        gap: 1.5rem;
+    }
+
+    .staff-card-horizontal {
+        min-width: 200px;
     }
 }
 
@@ -375,6 +567,31 @@
     .card-grid-3,
     .card-grid-4 {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Stack org chart vertically on mobile */
+    .org-chart-container {
+        gap: 2rem;
+    }
+
+    .org-level-staff {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .staff-card-horizontal {
+        min-width: 100%;
+    }
+
+    /* Hide horizontal connectors on mobile, keep vertical only */
+    .org-level-2 .org-level-staff::before,
+    .org-level-3 .org-level-staff::before {
+        display: none;
+    }
+
+    .org-level-2 .staff-card-horizontal::before,
+    .org-level-3 .staff-card-horizontal::before {
+        display: none;
     }
 }
 
